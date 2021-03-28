@@ -46,28 +46,3 @@ public class D02_This {
         }).start();
     }
 }
-
-
-class T implements Runnable {
-
-    private int count = 100;
-
-    @Override
-    public /*synchronized*/ void run() {
-        try {
-            count--;
-            System.out.println(Thread.currentThread().getName() + ": count=" + count);
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-    }
-
-    public static void main(String[] args) {
-        T t = new T();
-        for (int i = 0; i < 100; i++) {
-            new Thread(t, "Thread" + i).start();
-        }
-    }
-}
