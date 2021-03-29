@@ -1,4 +1,4 @@
-package sync;
+package L02_Synchronized;
 /**
  * @version: 1.0.0
  * @Author: Danny Zeng

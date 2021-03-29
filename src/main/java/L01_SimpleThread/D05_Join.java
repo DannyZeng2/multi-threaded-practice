@@ -1,4 +1,4 @@
-package simpleThread;
+package L01_SimpleThread;
 
 /**
  * @version: 1.0.0
@@ -13,7 +13,7 @@ public class D05_Join {
         Thread t1 = new Thread(() -> {
             for (int i = 0; i < 3; i++) {
                 try {
-                    Thread.sleep(200);
+                    Thread.sleep(2000);
                     System.out.println("T1...");
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -24,7 +24,7 @@ public class D05_Join {
         Thread t2 = new Thread(() -> {
             for (int i = 0; i < 3; i++) {
                 try {
-                    Thread.sleep(200);
+                    Thread.sleep(2000);
                     System.out.println("T2...");
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -36,7 +36,7 @@ public class D05_Join {
         Thread t3 = new Thread(() -> {
             for (int i = 0; i < 3; i++) {
                 try {
-                    Thread.sleep(200);
+                    Thread.sleep(2000);
                     System.out.println("T3...");
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -54,7 +54,6 @@ public class D05_Join {
 
         t2.start();
         t2.join();
-
 
     }
 }

@@ -1,14 +1,14 @@
-package sync;
+package L02_Synchronized;
 
 /**
  * @version: 1.0.0
  * @Author: Danny Zeng
- * @Date: 2021/3/28 14:40
+ * @Date: 2021/3/28 14:57
  * @LastEditors: Danny Zeng
- * @LastEditTime: 2021/3/28 14:40
+ * @LastEditTime: 2021/3/28 14:57
  * @Description: synchronized是可重入锁
  */
-public class D06_Reentrant1 {
+public class D06_Reentrant2 {
 
     synchronized void m1() {
         System.out.println("m1 start...");
@@ -17,10 +17,11 @@ public class D06_Reentrant1 {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        m2();
         System.out.println("m1 end...");
     }
+}
 
+class Child extends D06_Reentrant2 {
     synchronized void m2() {
         System.out.println("m2 start...");
         try {
@@ -28,11 +29,12 @@ public class D06_Reentrant1 {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        super.m1();
         System.out.println("m2 end...");
     }
 
     public static void main(String[] args) {
-        D06_Reentrant1 t = new D06_Reentrant1();
-        new Thread(t::m1,"m1").start();
+        Child child = new Child();
+        new Thread(child::m2).start();
     }
 }

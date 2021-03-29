@@ -1,4 +1,4 @@
-package simpleThread;
+package L01_SimpleThread;
 
 /**
  * @version: 1.0.0
