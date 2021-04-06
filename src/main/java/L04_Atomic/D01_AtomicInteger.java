@@ -16,10 +16,8 @@ public class D01_AtomicInteger {
     AtomicInteger count = new AtomicInteger(0);
     //int count = 0;
 
-
      void m1() {
         for (int i = 0; i < 100; i++) {
-
             try {
                 Thread.sleep(10);
             } catch (InterruptedException e) {
@@ -48,8 +46,5 @@ public class D01_AtomicInteger {
         });
 
         System.out.println(t.count);
-
     }
-
-
 }
