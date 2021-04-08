@@ -1,4 +1,4 @@
-package Other;
+package L06_Lock;
 
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
