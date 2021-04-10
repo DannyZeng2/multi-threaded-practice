@@ -14,7 +14,7 @@ public class VolatileDemo {
     volatile boolean running = true;
 
     void m1() {
-        System.out.println("m2 start...");
+        System.out.println("m1 start...");
         while (running) {
 
         }
