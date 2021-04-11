@@ -1,9 +1,9 @@
 package L08_ConcurrentContainer;
 
-import java.util.Hashtable;
 import java.util.Map;
 import java.util.Random;
 import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CountDownLatch;
 
 /**
@@ -15,9 +15,9 @@ import java.util.concurrent.CountDownLatch;
  */
 public class D01_ConcurrentMap {
     public static void main(String[] args) {
-         //Map<String, String> map = new ConcurrentHashMap<>(); //14728
+         Map<String, String> map = new ConcurrentHashMap<>(); //14728
         //Map<String, String> map = new ConcurrentSkipListMap<>();  // 高并发并且排序
-        Map<String, String> map = new Hashtable<>();  //15378
+       // Map<String, String> map = new Hashtable<>();  //15378
         //Map<String, String> map = new HashMap<>();
        // Map<String, String> map = Collections.synchronizedMap(new HashMap<>()); //14466
         //TreeMap

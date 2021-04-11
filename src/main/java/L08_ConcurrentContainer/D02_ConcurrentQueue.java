@@ -1,7 +1,7 @@
 package L08_ConcurrentContainer;
 
 import java.util.Queue;
-import java.util.concurrent.ConcurrentLinkedDeque;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 /**
  * @version: 1.0.0
@@ -12,7 +12,7 @@ import java.util.concurrent.ConcurrentLinkedDeque;
  */
 public class D02_ConcurrentQueue {
     public static void main(String[] args) {
-        Queue<String> queue = new ConcurrentLinkedDeque<>(); // 单向队列
+        Queue<String> queue = new ConcurrentLinkedQueue<>(); // 单向队列
         // ConcurrentLinkedDeque 双向队列
 
         for (int i = 0; i < 10; i++) {
