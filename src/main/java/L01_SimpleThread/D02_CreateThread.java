@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
  * @Date: 2021/3/27 17:49
  * @LastEditors: Danny Zeng
  * @LastEditTime: 2021/3/27 17:49
- * 创建线程的3种方式: 1. Thread 2.Runnable 3.Callable 4.Executors.newCacheThread
+ * 创建线程的4种方式: 1. Thread 2.Runnable 3.Callable 4.Executors.newCacheThread
  */
 public class D02_CreateThread {
     static class T1 extends Thread {
